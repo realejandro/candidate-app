@@ -24,7 +24,7 @@ export const Card = ( { login, location, email, company, bio, avatar_url } : Can
 
   const deleteCandidate = () => {
     if(candidateArray && candidateArray?.length > 0 ) {
-      setCurrentPosition?.(currentPosition - 1);
+      setCurrentPosition?.(currentPosition + 1);
     }
   }
 

@@ -20,12 +20,12 @@ export const CandidateComponent = () => {
   useEffect(() => {
     
     if(candidateArray && candidateArray.length > 0) {
-      const { login, location, email, company, bio, avatar_url } = candidateArray?.[currentPosition]
+      const { login, location, email, company, bio, avatar_url } = candidateArray[currentPosition]
       setCandidate({ login, location, email, company, bio, avatar_url })
       console.log(currentPosition) 
     }
      
-  }, [currentPosition])
+  }, [currentPosition, candidateArray])
   
   
   return (

@@ -14,6 +14,9 @@ const CandidateSearch = () => {
       searchGithub().then( data => {
         setResult(data);
         setCandidateUsername(data[currentPosition].login)
+        if(data && data.length > 0) {
+          setCurrentPosition(0)
+        }
       });  
     }, [])
   
